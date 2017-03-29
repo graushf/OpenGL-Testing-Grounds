@@ -1,13 +1,13 @@
-
 #include "input.h"
-#include <GLFW/glfw3.h>
+#include <iostream>
 
-void Input::key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) 
-{
-	// When a user presses the escape key, we set the WindowShouldClose property to true,
-	// closing the application
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-	{
+Input::Input() {
+	// Setting up Input constructor
+}
+
+void Input::key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
+	std::cout << key << std::endl;
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
 }

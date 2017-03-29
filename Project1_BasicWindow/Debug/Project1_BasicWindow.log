@@ -1,14 +1,20 @@
-﻿Build started 27/03/2017 13:50:14.
+﻿Build started 29/03/2017 11:13:54.
      1>Project "C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Project1_BasicWindow.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Input.cpp main.cpp
          main.cpp
+         Generating Code...
+         Compiling...
+         Input.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Debug\Project1_BasicWindow.exe" /INCREMENTAL /NOLOGO opengl32.lib glfw3.lib glew32s.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Debug\Project1_BasicWindow.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Debug\Project1_BasicWindow.lib" /MACHINE:X86 Debug\input.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Debug\Project1_BasicWindow.exe" /INCREMENTAL /NOLOGO opengl32.lib glfw3.lib glew32s.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Debug\Project1_BasicWindow.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Debug\Project1_BasicWindow.lib" /MACHINE:X86 Debug\Input.obj
          Debug\main.obj
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>glew32s.lib(glew.obj) : warning LNK4204: 'C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
          Project1_BasicWindow.vcxproj -> C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Debug\Project1_BasicWindow.exe
      1>Done Building Project "C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project1_BasicWindow\Project1_BasicWindow.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.12
+Time Elapsed 00:00:01.07
