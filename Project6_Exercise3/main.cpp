@@ -50,14 +50,25 @@ int main()
 	std::cout << "Starting GLFW context, OpenGL 3.3" << std::endl;
 	//Init GLFW
 	glfwInit();
+	if (!glewInit()) {
+		std::cout << "Couldn't initialize GLFW, glewInit() Failed";
+		return -1;
+	}
+
 	// Set all the required options for GLFW
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+	//glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	//glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	//glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	//glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+	glfwDefaultWindowHints();
+
+	GLint nrAttributes;
+	glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
+	std::cout << "Maixmum nr of vertex attributes supported: " << nrAttributes << std::endl;
+
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Project4_Exercise1", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Project4_Exercise1", nullptr , nullptr);
 	glfwMakeContextCurrent(window);
 
 	// Set the required callback functions
