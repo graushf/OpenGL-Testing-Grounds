@@ -46,7 +46,7 @@ int main()
 
 	// Build and compile our shader program
 	//Shader ourShader2 = Shader("./shaders/default.vs", "./shaders/default.frag");
-	Shader ourShader("./shaders/default.vs", "./shaders/default.frag");
+	Shader ourShader("./shaders/default.vertex", "./shaders/default.frag");
 
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	GLfloat vertices[] = {
