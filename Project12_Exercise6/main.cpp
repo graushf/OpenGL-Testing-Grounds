@@ -33,7 +33,7 @@ int main()
 	glfwDefaultWindowHints();
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Project9_ShaderClass", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Project12_Exercise6", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	// Set the required callback functions

@@ -30,7 +30,7 @@ int main()
 	glfwDefaultWindowHints();
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Project9_ShaderClass", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Project11_Exercise5", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	// Set the required callback functions
@@ -89,7 +89,6 @@ int main()
 
 		GLint horizontalOffsetLocation = glGetUniformLocation(ourShader.Program, "horizontal_offset");
 		glUniform1f(horizontalOffsetLocation, 0.6f);
-
 
 		// Draw the triangle
 		ourShader.Use();

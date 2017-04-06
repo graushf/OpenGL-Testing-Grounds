@@ -26,8 +26,10 @@ GLuint compileShaderStage(GLenum stage, const std::string& source)
 		GLint logSize = 0;
 		glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &logSize);
 
-		std::vector<GLchar> erroLog(logSize);
-		glGetShaderInfoLog(shader, logSize, &logSize, &erroLog[0]);
+		std::vector<GLchar> errorLog(logSize);
+		glGetShaderInfoLog(shader, logSize, &logSize, &errorLog[0]);
+		std::string s = std::string(errorLog.begin(), errorLog.end());
+		std::cout << s << std::endl;
 		assert(false);
 
 		glDeleteShader(shader);
