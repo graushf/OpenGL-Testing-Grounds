@@ -7,8 +7,11 @@ out vec4 color;
 uniform sampler2D ourTexture1;
 uniform sampler2D ourTexture2;
 
+uniform vec2 texMov;
+
 void main()
 {
+
 	// Linearly interpolate between both textures (second texture is only slightly combined)
-    color = mix(texture(ourTexture1, TexCoord), texture(ourTexture2, TexCoord), 0.2);
+    color = mix(texture(ourTexture1, vec2(TexCoord.x + texMov.x, TexCoord.y + texMov.y)), texture(ourTexture2, vec2(TexCoord.x + texMov.x, TexCoord.y + texMov.y)), 0.2);
 }

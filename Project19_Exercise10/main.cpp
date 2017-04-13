@@ -1,6 +1,6 @@
 /* 
 	EXERCISE 10
-	Use a uniform variable as the mix function's third parameter to vary the amount thw two textures are visible. Use the 
+	Use a uniform variable as the mix function's third parameter to vary the amount the two textures are visible. Use the 
 	up and down arrow keys to change how much the container or the smiley face is visible.
 */
 #include <iostream>
@@ -22,6 +22,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 // Window dimensions
 const GLuint WIDTH = 800, HEIGHT = 600;
+float fMixAmmount = 0.2;
 
 // The MAIN function, from here we start the application and run the game loop
 int main()
@@ -157,6 +158,10 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, texture2);
 		glUniform1i(glGetUniformLocation(ourShader.Program, "ourTexture2"), 1);
 
+
+		glUniform1f(glGetUniformLocation(ourShader.Program, "mixAmmount"), fMixAmmount);
+
+
 		// Draw container
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
@@ -179,5 +184,13 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GL_TRUE);
+	}
+
+	if (key == GLFW_KEY_UP && action == GLFW_PRESS) {
+		fMixAmmount += 0.05;
+	}
+
+	if (key == GLFW_KEY_DOWN && action == GLFW_PRESS) {
+		fMixAmmount -= 0.05;
 	}
 }

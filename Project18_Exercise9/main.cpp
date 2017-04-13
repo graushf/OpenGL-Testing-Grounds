@@ -23,10 +23,13 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 // Window dimensions
 const GLuint WIDTH = 800, HEIGHT = 600;
+float fMovTexH = 0.0;
+float fMovTexV = 0.0;
 
 // The MAIN function, from here we start the application and run the game loop
 int main()
 {
+	std::cout << "Press up, down, left and right arrow keys to move around the texture image" << std::endl;
 	// Init GLFW
 	glfwInit();
 	// Set all the required options for GLFW
@@ -57,11 +60,11 @@ int main()
 
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	GLfloat vertices[] = {
-		 //Positions              // Colors				// Texture Coords
-		 0.5f,  0.5f,  0.0f,      1.0f, 0.0f, 0.0f,		1.0f, 1.0f,    // Top Right
-		 0.5f, -0.5f,  0.0f,      0.0f, 1.0f, 0.0f,     1.0f, 0.0f,    // Bottom Right
-		-0.5f, -0.5f,  0.0f,      0.0f, 0.0f, 1.0f,	    0.0f, 0.0f,    // Bottom Left
-		-0.5f,  0.5f,  0.0f,	  1.0f, 1.0f, 0.0f,     0.0f, 1.0f	   // Top Left
+		 //Positions              // Colors				// Texture Coords		(Note that we changed them to 'zoom in' on our texture image)
+		 0.5f,  0.5f,  0.0f,      1.0f, 0.0f, 0.0f,		1.00f, 1.00f,    // Top Right
+		 0.5f, -0.5f,  0.0f,      0.0f, 1.0f, 0.0f,     1.0f,  0.00f,    // Bottom Right
+		-0.5f, -0.5f,  0.0f,      0.0f, 0.0f, 1.0f,	    0.00f, 0.00f,    // Bottom Left
+		-0.5f,  0.5f,  0.0f,	  1.0f, 1.0f, 0.0f,     0.00f, 1.00f	 // Top Left
 	};
 
 	GLuint indices[] = { // Note that we start from 0!
@@ -109,8 +112,8 @@ int main()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// Set texture wrapping to GL_REPEAT (usually basic wrapping method)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	// Set texture filtering parameters
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);		// NOTE the GL_NEAREST Here! 
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);		// NOTE the GL_NEAREST Here!
 	// Load image, create texture and generate mipmaps
 	int width, height;
 	unsigned char* image = SOIL_load_image("resources/container.jpg", &width, &height, 0, SOIL_LOAD_RGB);
@@ -127,8 +130,8 @@ int main()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	// Set texture filtering
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);	// NOTE the GL_NEAREST Here!
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);  // NOTE the GL_NEAREST Here!
 	// Load, create texture and generate mipmaps
 	image = SOIL_load_image("resources/awesomeface.png", &width, &height, 0, SOIL_LOAD_RGB);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
@@ -158,6 +161,9 @@ int main()
 		glBindTexture(GL_TEXTURE_2D, texture2);
 		glUniform1i(glGetUniformLocation(ourShader.Program, "ourTexture2"), 1);
 
+		glUniform2f(glGetUniformLocation(ourShader.Program, "texMov"), fMovTexH, fMovTexV);
+
+
 		// Draw container
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
@@ -180,5 +186,21 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, GL_TRUE);
+	}
+
+	if (key == GLFW_KEY_LEFT && action == GLFW_PRESS) {
+			fMovTexH -= 0.01;
+	}
+
+	if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS) {
+		fMovTexH += 0.01;
+	}
+
+	if (key == GLFW_KEY_DOWN && action == GLFW_PRESS) {
+		fMovTexV += 0.01;
+	}
+
+	if (key == GLFW_KEY_UP && action == GLFW_PRESS) {
+		fMovTexV -= 0.01;
 	}
 }

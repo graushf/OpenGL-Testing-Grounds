@@ -58,10 +58,10 @@ int main()
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	GLfloat vertices[] = {
 		 //Positions              // Colors				// Texture Coords
-		 0.5f,  0.5f,  0.0f,      1.0f, 0.0f, 0.0f,		1.0f, 1.0f,    // Top Right
-		 0.5f, -0.5f,  0.0f,      0.0f, 1.0f, 0.0f,     1.0f, 0.0f,    // Bottom Right
+		 0.5f,  0.5f,  0.0f,      1.0f, 0.0f, 0.0f,		2.0f, 2.0f,    // Top Right
+		 0.5f, -0.5f,  0.0f,      0.0f, 1.0f, 0.0f,     2.0f, 0.0f,    // Bottom Right
 		-0.5f, -0.5f,  0.0f,      0.0f, 0.0f, 1.0f,	    0.0f, 0.0f,    // Bottom Left
-		-0.5f,  0.5f,  0.0f,	  1.0f, 1.0f, 0.0f,     0.0f, 1.0f	   // Top Left
+		-0.5f,  0.5f,  0.0f,	  1.0f, 1.0f, 0.0f,     0.0f, 2.0f	   // Top Left
 	};
 
 	GLuint indices[] = { // Note that we start from 0!
@@ -105,12 +105,12 @@ int main()
 	// =======================
 	glGenTextures(1, &texture1);
 	glBindTexture(GL_TEXTURE_2D, texture1);	// All upcoming GL_TEXTURE_2D operations now have effect on this texture object
-	// Set the texture warpping parameters
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// Set texture wrapping to GL_REPEAT (usually basic wrapping method)
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	// Set the texture wrapping parameters
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);	// Note that we set our container wrapping method to GL_CLAMP_TO_EDGE
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);	// Note that we set our container wrapping method to GL_CLAMP_TO_EDGE
 	// Set texture filtering parameters
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	// Load image, create texture and generate mipmaps
 	int width, height;
 	unsigned char* image = SOIL_load_image("resources/container.jpg", &width, &height, 0, SOIL_LOAD_RGB);
@@ -124,8 +124,8 @@ int main()
 	glGenTextures(1, &texture2);
 	glBindTexture(GL_TEXTURE_2D, texture2);
 	// Set our texture parameters
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT); // We want to repeat this pattern so we set kept it at GL_REPEAT
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT); // We want to repeat this pattern so we set kept it at GL_REPEAT
 	// Set texture filtering
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);

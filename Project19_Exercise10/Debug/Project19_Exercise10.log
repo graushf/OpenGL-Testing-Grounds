@@ -1,10 +1,11 @@
-﻿Build started 07/04/2017 13:41:54.
+﻿Build started 13/04/2017 10:03:09.
      1>Project "C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project19_Exercise10\Project19_Exercise10.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp Shader.cpp
-         Shader.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-         Generating Code...
+     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\project19_exercise10\main.cpp(25): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\project19_exercise10\main.cpp(190): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\project19_exercise10\main.cpp(194): warning C4305: '-=' : truncation from 'double' to 'float'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project19_Exercise10\Debug\Project19_Exercise10.exe" /INCREMENTAL /NOLOGO opengl32.lib glfw3.lib glew32s.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project19_Exercise10\Debug\Project19_Exercise10.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project19_Exercise10\Debug\Project19_Exercise10.lib" /MACHINE:X86 Debug\main.obj
          Debug\Shader.obj
@@ -33,4 +34,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.98
+Time Elapsed 00:00:01.49
