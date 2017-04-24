@@ -222,7 +222,8 @@ int main()
 
 		// Create camera transformation
 		glm::mat4 view;
-		view = camera.GetViewMatrix();
+		//view = camera.GetViewMatrix();
+		view = camera.calculate_lookAt_matrix(glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glm::mat4 projection;
 		projection = glm::perspective(camera.Zoom, (float)screenWidth / (float)screenHeight, 0.1f, 1000.0f);
 		// Get the uniform locations

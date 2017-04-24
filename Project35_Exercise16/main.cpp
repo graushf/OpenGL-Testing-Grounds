@@ -32,7 +32,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void Do_Movement();
 
 // Camera
-CameraFirstPerson camera(glm::vec3(0.0f, 0.0f, 3.0f));
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 bool keys[1024];
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
@@ -274,16 +274,20 @@ void Do_Movement()
 	
 	// Camera Controls
 	if (keys[GLFW_KEY_W]) {
-		camera.ProcessKeyboard(FORWARD, deltaTime, (keys[GLFW_KEY_LEFT_SHIFT] || keys[GLFW_KEY_RIGHT_SHIFT]));
+		//camera.ProcessKeyboard(FORWARD, deltaTime, (keys[GLFW_KEY_LEFT_SHIFT] || keys[GLFW_KEY_RIGHT_SHIFT]));
+		camera.ProcessKeyboard(FORWARD, deltaTime);
 	}
 	if (keys[GLFW_KEY_S]) {
-		camera.ProcessKeyboard(BACKWARD, deltaTime, (keys[GLFW_KEY_LEFT_SHIFT] || keys[GLFW_KEY_RIGHT_SHIFT]));
+		//camera.ProcessKeyboard(BACKWARD, deltaTime, (keys[GLFW_KEY_LEFT_SHIFT] || keys[GLFW_KEY_RIGHT_SHIFT]));
+		camera.ProcessKeyboard(FORWARD, deltaTime);
 	}
 	if (keys[GLFW_KEY_A]) {
-		camera.ProcessKeyboard(LEFT, deltaTime, (keys[GLFW_KEY_LEFT_SHIFT] || keys[GLFW_KEY_RIGHT_SHIFT]));
+		//camera.ProcessKeyboard(LEFT, deltaTime, (keys[GLFW_KEY_LEFT_SHIFT] || keys[GLFW_KEY_RIGHT_SHIFT]));
+		camera.ProcessKeyboard(FORWARD, deltaTime);
 	}
 	if (keys[GLFW_KEY_D]) {
-		camera.ProcessKeyboard(RIGHT, deltaTime, (keys[GLFW_KEY_LEFT_SHIFT] || keys[GLFW_KEY_RIGHT_SHIFT]));
+		//camera.ProcessKeyboard(RIGHT, deltaTime, (keys[GLFW_KEY_LEFT_SHIFT] || keys[GLFW_KEY_RIGHT_SHIFT]));camera.ProcessKeyboard(FORWARD, deltaTime);
+		camera.ProcessKeyboard(FORWARD, deltaTime);
 	}
 }
 
