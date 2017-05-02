@@ -84,12 +84,18 @@
   <ItemGroup>
     <Image Include="resources\awesomeface.png" />
     <Image Include="resources\container.jpg" />
+    <Image Include="resources\plane_texture.png" />
+    <Image Include="resources\plane_texture2.png" />
+    <Image Include="resources\texture_background.jpg" />
+    <Image Include="resources\texture_background2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaderPlane.frag" />
-    <None Include="shaderPlane.vertex" />
     <None Include="shaders\shader.frag" />
     <None Include="shaders\shader.vertex" />
+    <None Include="shaders\shaderBackground.frag" />
+    <None Include="shaders\shaderBackground.vertex" />
+    <None Include="shaders\shaderPlane.frag" />
+    <None Include="shaders\shaderPlane.vertex" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

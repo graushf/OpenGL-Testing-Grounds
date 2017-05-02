@@ -60,6 +60,11 @@
 			void ProcessMouseMovement(GLfloat xoffset, GLfloat yoffset, GLboolean constrainPitch);
 			// Pocesses input received from a mouse scroll-wheel event. Only requires input on the vertical wheel-axis
 			void ProcessMouseScroll(GLfloat yoffset);
+			void Camera::updateOutputCamera();
+
+			// GUSTAVO FREE CAMERA
+			void Camera::ProcessMouseMovementRotation(GLfloat xoffset,GLfloat yoffset, GLboolean aux);
+			glm::mat4 Camera::calculate_lookAt_matrix_freecam(glm::vec3 position, glm::vec3 target, glm::vec3 worldUp);
 
 		private:
 			// Calculates the front vector from the Camera's (updated) Euler Angles

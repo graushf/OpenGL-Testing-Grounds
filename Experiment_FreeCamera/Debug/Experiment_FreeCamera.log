@@ -1,18 +1,26 @@
-﻿Build started 24/04/2017 14:12:38.
-     1>Project "C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Experiment_FreeCamera\Experiment_FreeCamera.vcxproj" on node 2 (Build target(s)).
+﻿Build started 01/05/2017 13:35:29.
+     1>Project "C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Experiment_FreeCamera.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\experiment_freecamera\main.cpp(240): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\experiment_freecamera\main.cpp(361): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\experiment_freecamera\main.cpp(362): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\experiment_freecamera\main.cpp(366): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\experiment_freecamera\main.cpp(367): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\experiment_freecamera\main.cpp(369): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\experiment_freecamera\main.cpp(370): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\3d-progr-pc-cl3ver\documents\learningopengl-git\opengl-testing-grounds\experiment_freecamera\main.cpp(377): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(66): warning C4244: 'initializing' : conversion from 'GLuint' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(67): warning C4244: 'initializing' : conversion from 'GLuint' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(244): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(285): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(286): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(404): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(405): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(409): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(410): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(413): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(414): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(417): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(418): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(421): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(422): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\experiment_freecamera\main.cpp(430): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\Experiment_FreeCamera.exe" /INCREMENTAL /NOLOGO opengl32.lib glew32s.lib glfw3.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\Experiment_FreeCamera.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\Experiment_FreeCamera.lib" /MACHINE:X86 Debug\Camera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\Experiment_FreeCamera.exe" /INCREMENTAL /NOLOGO opengl32.lib glew32s.lib glfw3.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\Experiment_FreeCamera.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\Experiment_FreeCamera.lib" /MACHINE:X86 Debug\Camera.obj
          Debug\main.obj
          Debug\Shader.obj
          SOIL.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
@@ -34,10 +42,28 @@
      1>Shader.obj : warning LNK4049: locally defined symbol ___glewLinkProgram imported
      1>Shader.obj : warning LNK4049: locally defined symbol ___glewShaderSource imported
      1>Shader.obj : warning LNK4049: locally defined symbol ___glewUseProgram imported
-     1>glew32s.lib(glew.obj) : warning LNK4204: 'C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
-         Experiment_FreeCamera.vcxproj -> C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\Experiment_FreeCamera.exe
-     1>Done Building Project "C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Experiment_FreeCamera\Experiment_FreeCamera.vcxproj" (Build target(s)).
+     1>SOIL.lib(SOIL.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>SOIL.lib(stb_image_aug.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>SOIL.lib(image_helper.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>SOIL.lib(image_DXT.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glew32s.lib(glew.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(context.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(init.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(input.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(monitor.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(vulkan.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(window.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_init.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_joystick.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_monitor.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_time.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_tls.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_window.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(wgl_context.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(egl_context.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+         Experiment_FreeCamera.vcxproj -> C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Debug\Experiment_FreeCamera.exe
+     1>Done Building Project "C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Experiment_FreeCamera\Experiment_FreeCamera.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.54
+Time Elapsed 00:00:02.31

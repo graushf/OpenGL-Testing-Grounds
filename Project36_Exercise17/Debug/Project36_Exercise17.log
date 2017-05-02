@@ -1,10 +1,21 @@
-﻿Build started 24/04/2017 12:36:50.
-     1>Project "C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project36_Exercise17\Project36_Exercise17.vcxproj" on node 2 (Build target(s)).
+﻿Build started 24/04/2017 20:24:21.
+     1>Project "C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Project36_Exercise17.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp Shader.cpp main.cpp
+         main.cpp
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\project36_exercise17\main.cpp(200): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\project36_exercise17\main.cpp(300): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\project36_exercise17\main.cpp(301): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\project36_exercise17\main.cpp(305): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\project36_exercise17\main.cpp(306): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\project36_exercise17\main.cpp(308): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\project36_exercise17\main.cpp(309): warning C4244: '=' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\gus7_\proyectos\learningopengl\opengl-testing-grounds\project36_exercise17\main.cpp(316): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+         Shader.cpp
          Camera.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\Project36_Exercise17.exe" /INCREMENTAL /NOLOGO opengl32.lib glfw3.lib glew32s.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\Project36_Exercise17.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\Project36_Exercise17.lib" /MACHINE:X86 Debug\Camera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\Project36_Exercise17.exe" /INCREMENTAL /NOLOGO opengl32.lib glfw3.lib glew32s.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\Project36_Exercise17.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\Project36_Exercise17.lib" /MACHINE:X86 Debug\Camera.obj
          Debug\main.obj
          Debug\Shader.obj
          SOIL.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
@@ -26,10 +37,28 @@
      1>Shader.obj : warning LNK4049: locally defined symbol ___glewLinkProgram imported
      1>Shader.obj : warning LNK4049: locally defined symbol ___glewShaderSource imported
      1>Shader.obj : warning LNK4049: locally defined symbol ___glewUseProgram imported
-     1>glew32s.lib(glew.obj) : warning LNK4204: 'C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
-         Project36_Exercise17.vcxproj -> C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\Project36_Exercise17.exe
-     1>Done Building Project "C:\Users\3D-PROGR-PC-CL3VER\Documents\LearningOpenGL-GIT\OpenGL-Testing-Grounds\Project36_Exercise17\Project36_Exercise17.vcxproj" (Build target(s)).
+     1>SOIL.lib(SOIL.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>SOIL.lib(stb_image_aug.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>SOIL.lib(image_helper.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>SOIL.lib(image_DXT.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(context.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(init.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(input.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(monitor.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(vulkan.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(window.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_init.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_joystick.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_monitor.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_time.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_tls.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(win32_window.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(wgl_context.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glfw3.lib(egl_context.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>glew32s.lib(glew.obj) : warning LNK4204: 'C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\vc120.pdb' is missing debugging information for referencing module; linking object as if no debug info
+         Project36_Exercise17.vcxproj -> C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Debug\Project36_Exercise17.exe
+     1>Done Building Project "C:\Users\gus7_\Proyectos\LearningOpenGL\OpenGL-Testing-Grounds\Project36_Exercise17\Project36_Exercise17.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.44
+Time Elapsed 00:00:11.18

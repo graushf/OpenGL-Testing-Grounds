@@ -69,11 +69,49 @@ Camera::Camera(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat upX, GLfloat up
 	this->updateCameraVectors();
 }
 
-
-
 // Custom implementation of the LookAt function
 glm::mat4 Camera::calculate_lookAt_matrix(glm::vec3 position, glm::vec3 target, glm::vec3 worldUp)
 {
+	Position.x += position.x;
+	Position.y += position.y;
+	Position.z += position.z;
+	// 1. Position = known
+	// 2. Calculate cameraDirection
+	glm::vec3 zaxis = glm::normalize(position - target);
+	// 3. Get positiove right axis vector
+	glm::vec3 xaxis = glm::normalize(glm::cross(glm::normalize(worldUp), zaxis));
+	// 4. Calculate camera up vector
+	glm::vec3 yaxis = glm::cross(zaxis, xaxis);
+
+	// Create translation and rotation matrix
+	// In glm we access elements as mat[col][row] due to column-major layout
+	glm::mat4 translation; // Identity matrix by default
+	translation[3][0] = -Position.x;
+	translation[3][1] = -Position.y;
+	translation[3][2] = -Position.z;
+	glm::mat4 rotation;
+	rotation[0][0] = Right.x; // First column, first row
+	rotation[1][0] = Right.y;
+	rotation[2][0] = Right.z;
+	rotation[0][1] = Up.x; // First column, second row
+	rotation[1][1] = Up.y;
+	rotation[2][1] = Up.z;
+	rotation[0][2] = -Front.x; // First column, third row
+	rotation[1][2] = -Front.y;
+	rotation[2][2] = -Front.z;
+
+	// Return lookAt matrix as combination of translation and rotation matrix
+	return rotation * translation; // Remember to read from right to left (first translation then rotation)
+}
+
+
+
+// GUSTAVO freecamera
+glm::mat4 Camera::calculate_lookAt_matrix_freecam(glm::vec3 position, glm::vec3 target, glm::vec3 worldUp)
+{
+	Position.x = position.x;
+	Position.y = position.y;
+	Position.z = position.z;
 	// 1. Position = known
 	// 2. Calculate cameraDirection
 	glm::vec3 zaxis = glm::normalize(position - target);
@@ -191,15 +229,16 @@ void Camera::ProcessMouseMovement(GLfloat xoffset, GLfloat yoffset, GLboolean co
 
 
 void Camera::ProcessMouseScroll(GLfloat yoffset) {
-	if (this->Zoom >= 1.0f && this->Zoom <= 45.0f) {
+	if (this->Zoom >= 1.0f && this->Zoom <= 90.0f) {
 		this->Zoom -= yoffset * SCROLLSENSITIVITY;
 	}
 	if (this->Zoom <= 1.0f) {
 		this->Zoom = 1.0f;
 	}
 	if (this->Zoom >= 45.0f) {
-		this->Zoom = 45.0f;
+		//this->Zoom = 45.0f;
 	}
+	std::cout << "Zoom level:\t\t" << this->Zoom;
 }
 
 void Camera::updateCameraVectors() {
@@ -214,3 +253,55 @@ void Camera::updateCameraVectors() {
 	this->Up = glm::normalize(glm::cross(this->Right, this->Front));
 }
 
+
+void Camera::updateOutputCamera() {
+	/*
+	glm::vec3 Position;
+			glm::vec3 Front;
+			glm::vec3 Up;
+			glm::vec3 Right;
+			glm::vec3 WorldUp;
+			// Eular angles
+			GLfloat Yaw;
+			GLfloat Pitch;
+	*/
+	std::cout << "//******************************************************************************//" << std::endl;
+	std::cout << "Position:\t(" << Position.x << ", " << Position.y << ", " << Position.z << ")" << std::endl;
+	std::cout << "Front:\t(" << Front.x << ", " << Front.y << ", " << Front.z << ")" << std::endl;
+	std::cout << "Up:\t(" << Up.x << ", " << Up.y << ", " << Up.z << ")" << std::endl;
+	std::cout << "Right:\t(" << Right.x << ", " << Right.y << ", " << Right.z << ")" << std::endl;
+	std::cout << "WorldUp:\t(" << WorldUp.x << ", " << WorldUp.y << ", " << WorldUp.z << ")" << std::endl;
+	std::cout << "Yaw:\t" << Yaw << std::endl;
+	std::cout << "Pitch:\t" << Pitch << std::endl;
+	std::cout << "//******************************************************************************//" << std::endl;
+	std::cout << std::endl;
+}
+
+
+// GUSTAVO FREE CAMERA
+void Camera::ProcessMouseMovementRotation(GLfloat xoffset, GLfloat yoffset, GLboolean aux) {
+	/*
+	constrainPitch = true;
+	xoffset *= this->MouseSensitivity;
+	yoffset *= this->MouseSensitivity;
+
+	this->Yaw += xoffset;
+	this->Pitch += yoffset;
+
+	// Make sure that when pitch is out of bounds, screen downs't get flipped
+	if (constrainPitch) {
+		if (this->Pitch > 89.0f) {
+			this->Pitch = 89.0f;
+		}
+		if (this->Pitch < -89.0f) {
+			this->Pitch = -89.0f;
+		}
+	}
+
+	// Update Front, Right and Up Vectors using the updater Euler Angles
+	this->updateCameraVectors();
+	
+	*/
+
+
+}
